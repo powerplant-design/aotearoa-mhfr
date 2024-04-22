@@ -1,0 +1,8 @@
+.navLink {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.navLinkFocused {
+    color: yellow;
+}

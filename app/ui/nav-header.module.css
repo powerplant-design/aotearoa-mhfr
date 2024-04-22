@@ -1,0 +1,22 @@
+.nav {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+    height: 75px;
+}
+
+.navDrawer {
+    height: calc(100% - 75px);
+    position: absolute;
+    background-color: blue;
+    inset: 75px 0 0 0;
+    transition: transform 300ms ease-in-out;
+    transform: translateX(-100%);
+    padding: 0 1rem;
+}
+
+.navOpen {
+    transform: translateX(0);
+}
