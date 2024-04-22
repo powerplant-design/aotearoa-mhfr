@@ -1,11 +1,16 @@
-// import Image from "next/image";
-// import NavHeader from "@/app/ui/nav-header";
+import Image from "next/image";
 
 export default function Home() {
     return (
-        <div className='container'>
-            <h2>HOME PAGE</h2>
-            <p>BODY</p>
+        <div className='container centerer'>
+            <Image
+                src='/opotiki-logo.svg'
+                alt='Opotiki Logo'
+                // className='dark:invert'
+                width={420}
+                height={420}
+                priority
+            />
         </div>
     );
 }
