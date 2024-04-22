@@ -1,11 +1,12 @@
 import Image from "next/image";
+import IconPerson from "@/public/icon-person.svg";
 
 export default function Page() {
     return (
         <>
             <div className='header'>
                 <Image
-                    src='/convos.svg'
+                    src={IconPerson}
                     alt='Convos Icon'
                     width={60}
                     height={60}

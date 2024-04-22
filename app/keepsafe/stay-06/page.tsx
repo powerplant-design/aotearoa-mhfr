@@ -9,16 +9,23 @@ export default function Page() {
         <>
             <div className={Style.header}>
                 <Image src={Icon} alt='Icon' />
-                <h2 className={Style.H2}>KEEP SAFE FLOW CHART</h2>
+                <h2 className={Style.H2}>Stay Together</h2>
             </div>
             <div className={Style.container}>
                 <div className={Style.body}>
-                    <p>Use this flow to help when someone is in crisis.</p>
+                    <p className='italic'>
+                        Ensure supporter and supported person have all
+                        information, there are backup supporters, and they know
+                        when you will be back in touch.
+                    </p>
                 </div>
             </div>
             <div className={Style.navFooter}>
-                <Link className={Style.Link} href='/keepsafe/ask-01'>
-                    GET STARTED
+                <Link className={Style.Link} href='/keepsafe/stay-05'>
+                    BACK
+                </Link>
+                <Link className={Style.Link} href='/keepsafe'>
+                    START OVER
                 </Link>
             </div>
         </>

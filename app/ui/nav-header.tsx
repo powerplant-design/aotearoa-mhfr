@@ -14,7 +14,7 @@ import close from "@/public/nav-close.svg";
 
 const links = [
     { name: "Home", href: "/" },
-    { name: "Keepsafe Flow", href: "/keepsafe" },
+    { name: "Keep Safe Flow", href: "/keepsafe" },
     { name: "CONVOS", href: "/convos" },
     { name: "Support Services", href: "/support" },
     { name: "Guiding Lights", href: "/guiding-lights" },
@@ -33,9 +33,9 @@ export default function HeaderNav() {
         <nav className={styles.nav}>
             <button onClick={handleClick}>
                 {isOpen ? (
-                    <Image src={close} alt='Menu' />
+                    <Image src={close} alt='Menu Close' />
                 ) : (
-                    <Image src={hamburger} alt='Menu' />
+                    <Image src={hamburger} alt='Menu Open' />
                 )}
             </button>
 

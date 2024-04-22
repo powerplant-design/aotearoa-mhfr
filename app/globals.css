@@ -69,4 +69,5 @@ h2 {
     gap: 1rem;
     grid-template-columns: 60px 1fr;
     align-items: center;
+    min-height: 160px;
 }
