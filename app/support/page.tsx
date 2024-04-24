@@ -4,7 +4,7 @@ import IconSun from "@/public/icon-sun.svg";
 export default function Page() {
     return (
         <>
-            <div className='header'>
+            {/* <div className='header'>
                 <Image
                     src={IconSun}
                     alt='Convos Icon'
@@ -13,7 +13,7 @@ export default function Page() {
                     priority
                 />
                 <h2 className='H2'>Support Services</h2>
-            </div>
+            </div> */}
             <div className='container'>
                 <p>Copy to go here...</p>
             </div>

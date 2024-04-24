@@ -15,7 +15,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html className={`${poppins.className} antialiased`} lang='en'>
+        <html className={`${poppins.className} antialiased bg`} lang='en'>
             <body className='md:py-8'>
                 <div className='main md:rounded-2xl h-full'>
                     <NavHeader />

@@ -28,6 +28,11 @@ export default function HeaderNav() {
     }
 
     const pathname = usePathname();
+    let title = "";
+    if (pathname == "/") title = "MENTAL HEALTH FIRST RESPONSE";
+    else if (pathname == "/convos") title = "CONVOS";
+    else if (pathname == "/support") title = "SUPPORT SERVICES";
+    else if (pathname == "/guiding-lights") title = "GUIDING LIGHTS";
 
     return (
         <nav className={styles.nav}>
@@ -39,7 +44,7 @@ export default function HeaderNav() {
                 )}
             </button>
 
-            <h1>{pathname}</h1>
+            <p className='font-bold tracking-wide'>{title}</p>
 
             <div
                 className={clsx([styles.navDrawer], {
@@ -48,7 +53,6 @@ export default function HeaderNav() {
             >
                 <>
                     {links.map((link) => {
-                        // const LinkIcon = link.icon;
                         return (
                             <Link
                                 key={link.name}
@@ -57,10 +61,8 @@ export default function HeaderNav() {
                                     [styles.navLinkFocused]:
                                         pathname === link.href,
                                 })}
-                                // HOW TO CHANGE STATE OF NAV-HEADER ON CLICK?
                                 onClick={handleClick}
                             >
-                                {/* <LinkIcon className='w-6' /> */}
                                 <p className=''>{link.name}</p>
                             </Link>
                         );
