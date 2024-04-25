@@ -62,13 +62,15 @@ body {
 }
 
 .container {
-    padding: 2rem;
+    padding: 1.6rem;
+    margin-bottom: 45px;
 }
 
 .centerer {
     display: grid;
     place-items: center;
-    height: calc(100% - 75px);
+    height: calc(100% - 150px);
+    gap: 2rem;
 }
 
 h1 {
@@ -83,7 +85,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 1;
 }
@@ -91,7 +93,6 @@ h2 {
 .header {
     background-color: #193f49;
     padding: 2rem;
-
     display: grid;
     gap: 1rem;
     grid-template-columns: 60px 1fr;
@@ -109,6 +110,7 @@ h2 {
     bottom: 1.2rem;
     right: 1rem;
     display: flex;
+    flex-direction: column;
     gap: 0.5rem;
 }
 
@@ -129,14 +131,18 @@ h2 {
     padding-bottom: 4rem;
 }
 
+.convo h2 {
+    margin-top: 2rem;
+}
+
 .convo h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 .convo h4 {
-    font-size: 2rem;
-    margin-top: 2rem;
     text-align: right;
+    font-size: 3rem;
+    line-height: 1.1;
     font-family: "bely-display";
     color: #193f49;
 }
@@ -146,16 +152,13 @@ h2 {
 }
 
 .light h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: right;
     max-width: 22ch;
     margin-top: 2rem;
     margin-left: auto;
 }
-.supportText {
-    margin-bottom: 3rem;
-}
 
-.bg {
-    background-color: #f17e2b;
+.supportText {
+    text-align: center;
 }

@@ -17,6 +17,7 @@
     padding: 0 1rem;
 
     z-index: 6;
+    overflow: hidden;
 }
 
 .navOpen {
@@ -25,7 +26,7 @@
 
 .navLink {
     user-select: none;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     transition: color 400ms;
 }
@@ -37,4 +38,37 @@
 .navLinkFocused {
     pointer-events: none;
     color: #f17e2b;
+}
+
+.navImageHide {
+    display: none;
+}
+
+.navImage {
+    position: absolute;
+    /* margin-top: 200px; */
+    scale: 1.4;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+    -webkit-animation: spin 13s linear infinite;
+    -moz-animation: spin 13s linear infinite;
+    animation: spin 13s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }

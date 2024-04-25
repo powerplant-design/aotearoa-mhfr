@@ -8,8 +8,8 @@ export default function Home() {
             <Image
                 src='/opotiki-logo.svg'
                 alt='Opotiki Logo'
-                width={320}
-                height={320}
+                width={280}
+                height={280}
                 priority
             />
             <div className='home-content font-bold'>

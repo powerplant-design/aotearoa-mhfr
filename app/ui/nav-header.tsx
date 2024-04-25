@@ -13,9 +13,9 @@ import hamburger from "@/public/nav-hamburg.svg";
 import close from "@/public/nav-close.svg";
 
 const links = [
-    { name: "Home", href: "/" },
-    { name: "Keep Safe Flow", href: "/keepsafe" },
+    { name: "Ōpōtiki", href: "/" },
     { name: "CONVOS", href: "/convos" },
+    { name: "Keep Safe Flow", href: "/keepsafe" },
     { name: "Support Services", href: "/support" },
     { name: "Guiding Lights", href: "/guiding-lights" },
 ];
@@ -67,6 +67,18 @@ export default function HeaderNav() {
                             </Link>
                         );
                     })}
+
+                    <Image
+                        src='/opotiki-logo.svg'
+                        alt='Opotiki Logo'
+                        // className={styles.navImage}
+                        className={clsx([styles.navImage], {
+                            [styles.navImageHide]: !isOpen,
+                        })}
+                        width={600}
+                        height={600}
+                        priority
+                    />
                 </>
             </div>
         </nav>

@@ -52,7 +52,7 @@ export default function Page() {
                         </div>
                     );
                 })}
-                <p className='supportText'>If you need additional support:</p>
+                <p className='supportText'>If you need additional support</p>
             </div>
             <div className='navFooter'>
                 <Link className='Link' href='/support'>

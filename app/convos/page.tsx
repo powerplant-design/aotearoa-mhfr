@@ -26,27 +26,17 @@ const convos = [
 export default function Page() {
     return (
         <>
-            {/* <div className='header'>
-                <Image
-                    src={IconPerson}
-                    alt='Convos Icon'
-                    width={60}
-                    height={60}
-                    priority
-                />
-                <h2 className='H2'>CONVOS</h2>
-            </div> */}
             <div className='container'>
                 {convos.map((convo) => {
                     return (
                         <div className='convo' key={convo.heading}>
+                            <h4>{convo.tereo}</h4>
                             <h2>{convo.heading}</h2>
                             <h3>{convo.subheading}</h3>
-                            <h4>{convo.tereo}</h4>
                         </div>
                     );
                 })}
-                <p className='supportText'>If you need additional support:</p>
+                <p className='supportText'>If you need additional support</p>
             </div>
             <div className='navFooter'>
                 <Link className='Link' href='/support'>
