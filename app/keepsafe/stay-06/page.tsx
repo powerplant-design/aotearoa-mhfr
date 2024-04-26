@@ -9,7 +9,7 @@ export default function Page() {
         <>
             <div className={Style.header}>
                 <Image src={Icon} alt='Icon' />
-                <h2 className={Style.H2}>Stay Together</h2>
+                <h2 className={Style.H2}>Stay Connected</h2>
             </div>
             <div className={Style.container}>
                 <div className={Style.body}>
@@ -24,8 +24,8 @@ export default function Page() {
                 <Link className={Style.Link} href='/keepsafe/stay-05'>
                     BACK
                 </Link>
-                <Link className={Style.Link} href='/keepsafe'>
-                    START OVER
+                <Link className={Style.Link} href='/keepsafe/stay-07'>
+                    NEXT
                 </Link>
             </div>
         </>

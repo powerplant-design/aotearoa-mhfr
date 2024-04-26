@@ -13,7 +13,7 @@ export default function Page() {
             </div>
             <div className={Style.container}>
                 <div className={Style.body}>
-                    <p>Who would you rather have with you?</p>
+                    <p>“Who would you rather have with you?”</p>
                 </div>
             </div>
             <div className={Style.navFooter}>

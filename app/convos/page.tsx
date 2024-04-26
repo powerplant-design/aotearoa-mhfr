@@ -30,9 +30,9 @@ export default function Page() {
                 {convos.map((convo) => {
                     return (
                         <div className='convo' key={convo.heading}>
-                            <h4>{convo.tereo}</h4>
                             <h2>{convo.heading}</h2>
                             <h3>{convo.subheading}</h3>
+                            <h4>{convo.tereo}</h4>
                         </div>
                     );
                 })}

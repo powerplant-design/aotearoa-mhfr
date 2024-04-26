@@ -14,8 +14,8 @@ export default function Page() {
             <div className={Style.container}>
                 <div className={Style.body}>
                     <p>
-                        We need to make sure you&apos;re not alone while feeling
-                        this way—is it ok for me to stay with you?
+                        “We need to make sure you&apos;re not alone while
+                        feeling this way—is it ok for me to stay with you?”
                     </p>
                 </div>
             </div>

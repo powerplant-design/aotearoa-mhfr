@@ -13,10 +13,10 @@ export default function Page() {
             </div>
             <div className={Style.container}>
                 <div className={Style.body}>
-                    <p>Thank you for telling me.</p>
+                    <p>“Thank you for telling me.”</p>
                     <p>
-                        I just need to ask a few more questions to help keep you
-                        safe.
+                        “I just need to ask a few more questions to help keep
+                        you safe.”
                     </p>
                 </div>
             </div>

@@ -13,10 +13,7 @@ export default function Page() {
             </div>
             <div className={Style.container}>
                 <div className={Style.body}>
-                    <p>
-                        Have you made any plans or taken any steps towards
-                        taking your own life?
-                    </p>
+                    <p>“Have you made any plans to take your own life?”</p>
                 </div>
             </div>
             <div className={Style.navFooter}>

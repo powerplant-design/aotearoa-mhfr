@@ -14,8 +14,8 @@ export default function Page() {
             <div className={Style.container}>
                 <div className={Style.body}>
                     <p>
-                        I will need to go, who would you like to stay with you
-                        while I&apos;m away?
+                        “I will need to go, who would you like to be with while
+                        I&apos;m away?”
                     </p>
                 </div>
             </div>

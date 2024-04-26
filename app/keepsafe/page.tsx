@@ -9,12 +9,12 @@ export default function Page() {
         <>
             <div className={Style.header}>
                 <Image src={Icon} alt='Icon' />
-                <h2 className={Style.H2}>KEEP SAFE FLOW CHART</h2>
+                <h2 className={Style.H2}>KEEP SAFE STEPS</h2>
             </div>
             <div className={Style.container}>
                 <div className={Style.body}>
                     <p>
-                        Use this flow to help when someone is at risk of harm.
+                        Use these steps to help when someone is at risk of harm.
                     </p>
                 </div>
             </div>

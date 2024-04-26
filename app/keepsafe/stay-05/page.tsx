@@ -9,13 +9,13 @@ export default function Page() {
         <>
             <div className={Style.header}>
                 <Image src={Icon} alt='Icon' />
-                <h2 className={Style.H2}>Stay Together</h2>
+                <h2 className={Style.H2}>Stay Connected</h2>
             </div>
             <div className={Style.container}>
                 <div className={Style.body}>
                     <p className='italic'>
-                        Contact new supporter and stay with the person until the
-                        new supporter arrives.
+                        Contact new supporter and stay with the person until
+                        they are together.
                     </p>
                 </div>
             </div>

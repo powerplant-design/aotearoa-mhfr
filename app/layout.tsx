@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { poppins } from "@/app/ui/fonts";
+import bg from "@/public/bg.jpg";
 
 import NavHeader from "@/app/ui/nav-header";
 
@@ -17,7 +18,13 @@ export default function RootLayout({
     return (
         <html className={`${poppins.className} antialiased bg`} lang='en'>
             <body className='md:py-8'>
-                <div className='main md:rounded-2xl h-full'>
+                <div
+                    className='main md:rounded-2xl h-full'
+                    style={{
+                        backgroundImage: `url(${bg.src})`,
+                        backgroundSize: "cover",
+                    }}
+                >
                     <NavHeader />
                     {children}
                 </div>

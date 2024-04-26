@@ -13,10 +13,10 @@ export default function Page() {
             </div>
             <div className={Style.container}>
                 <div className={Style.body}>
-                    <p>You won&apos;t always feel this way.</p>
+                    <p>“You won&apos;t always feel this way.”</p>
                     <p>
-                        Let&apos;s make sure you&apos;re not alone until we get
-                        some support to help these feelings go away.
+                        “Let&apos;s make sure you&apos;re not alone until we get
+                        some support to help you make sense of these feelings.”
                     </p>
                 </div>
             </div>

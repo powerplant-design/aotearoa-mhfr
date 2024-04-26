@@ -14,8 +14,8 @@ export default function Page() {
             <div className={Style.container}>
                 <div className={Style.body}>
                     <p>
-                        Do you have a support option you would like me to call,
-                        or shall we find one together?
+                        “Do you have a support option you would like me to call,
+                        or shall we find one together?”
                     </p>
                 </div>
             </div>

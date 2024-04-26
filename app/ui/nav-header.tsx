@@ -31,6 +31,7 @@ export default function HeaderNav() {
     let title = "";
     if (pathname == "/") title = "MENTAL HEALTH FIRST RESPONSE";
     else if (pathname == "/convos") title = "CONVOS";
+    else if (pathname == "/convos") title = "CONVOS";
     else if (pathname == "/support") title = "SUPPORT SERVICES";
     else if (pathname == "/guiding-lights") title = "GUIDING LIGHTS";
 
@@ -44,6 +45,7 @@ export default function HeaderNav() {
                 )}
             </button>
 
+            {/* <p className='font-bold tracking-wide'>{pathname}</p> */}
             <p className='font-bold tracking-wide'>{title}</p>
 
             <div
@@ -69,7 +71,7 @@ export default function HeaderNav() {
                     })}
 
                     <Image
-                        src='/opotiki-logo.svg'
+                        src='/logo-opotiki.png'
                         alt='Opotiki Logo'
                         // className={styles.navImage}
                         className={clsx([styles.navImage], {

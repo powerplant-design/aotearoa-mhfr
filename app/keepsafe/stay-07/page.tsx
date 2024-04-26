@@ -9,22 +9,26 @@ export default function Page() {
         <>
             <div className={Style.header}>
                 <Image src={Icon} alt='Icon' />
-                <h2 className={Style.H2}>Call Support</h2>
+                <h2 className={Style.H2}>Supporter Care</h2>
             </div>
             <div className={Style.container}>
                 <div className={Style.body}>
+                    <p className='italic'>How are you feeling now?</p>
                     <p className='italic'>
-                        Contact support options with the consent of the person
-                        you are supporting.
+                        These conversations can be tough and supporters need
+                        support too.
+                    </p>
+                    <p className='italic'>
+                        Who can you reach out to for support if you need?
                     </p>
                 </div>
             </div>
             <div className={Style.navFooter}>
-                <Link className={Style.Link} href='/keepsafe/call-02'>
+                <Link className={Style.Link} href='/keepsafe/stay-05'>
                     BACK
                 </Link>
-                <Link className={Style.Link} href='/keepsafe/stay-01'>
-                    CONTACTED
+                <Link className={Style.Link} href='/keepsafe'>
+                    START OVER
                 </Link>
             </div>
         </>

@@ -18,7 +18,8 @@ export default function Page() {
                         connected with support services.
                     </p>
                     <p className='italic'>
-                        If you need to leave, follow steps for handover.
+                        If you need to leave, follow next steps to stay
+                        connected.
                     </p>
                 </div>
             </div>

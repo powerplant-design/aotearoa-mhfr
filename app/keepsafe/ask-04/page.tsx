@@ -13,18 +13,18 @@ export default function Page() {
             </div>
             <div className={Style.container}>
                 <div className={Style.body}>
-                    <p>
-                        Thank you for telling me because I&apos;m here to keep
-                        us safe from those plans and steps.
-                    </p>
+                    <p>“Have you taken any steps towards those plans?”</p>
                 </div>
             </div>
             <div className={Style.navFooter}>
-                <Link className={Style.Link} href='/keepsafe/ask-03'>
+                <Link className={Style.Link} href='/keepsafe/ask-02'>
                     BACK
                 </Link>
                 <Link className={Style.Link} href='/keepsafe/call-01'>
-                    NEXT
+                    NO
+                </Link>
+                <Link className={Style.Link} href='/keepsafe/ask-05'>
+                    YES
                 </Link>
             </div>
         </>

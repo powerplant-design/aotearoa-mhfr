@@ -6,7 +6,7 @@ export default function Home() {
         <div className='container centerer'>
             <h1>Ōpōtiki</h1>
             <Image
-                src='/opotiki-logo.svg'
+                src='/logo-opotiki.png'
                 alt='Opotiki Logo'
                 width={280}
                 height={280}
