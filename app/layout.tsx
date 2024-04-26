@@ -3,6 +3,8 @@ import "./globals.css";
 import { poppins } from "@/app/ui/fonts";
 import bg from "@/public/bg.jpg";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import NavHeader from "@/app/ui/nav-header";
 
 export const metadata: Metadata = {
