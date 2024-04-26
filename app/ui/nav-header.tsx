@@ -15,7 +15,7 @@ import close from "@/public/nav-close.svg";
 const links = [
     { name: "Ōpōtiki", href: "/" },
     { name: "CONVOS", href: "/convos" },
-    { name: "Keep Safe Flow", href: "/keepsafe" },
+    { name: "Keep Safe Steps", href: "/keepsafe" },
     { name: "Support Services", href: "/support" },
     { name: "Guiding Lights", href: "/guiding-lights" },
 ];
