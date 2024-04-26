@@ -24,11 +24,11 @@ export default function Page() {
                 </div>
             </div>
             <div className={Style.navFooter}>
-                <Link className={Style.Link} href='/keepsafe/stay-05'>
+                <Link className={Style.Link} href='/keepsafe/stay-06'>
                     BACK
                 </Link>
-                <Link className={Style.Link} href='/keepsafe'>
-                    START OVER
+                <Link className={Style.Link} href='/support'>
+                    SUPPORT
                 </Link>
             </div>
         </>

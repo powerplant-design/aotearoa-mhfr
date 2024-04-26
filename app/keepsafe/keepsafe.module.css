@@ -9,17 +9,17 @@
     color: #fff;
     /* background-color: #193f49; */
     border-bottom: 2px solid #fff;
-    padding: 2rem 1rem 2.6rem 1rem;
+    padding: 1.6rem 1rem 2rem 1rem;
     display: grid;
     gap: 1rem;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 40px 1fr;
     align-items: center;
-    min-height: 120px;
+    min-height: 100px;
     margin: 1rem;
 }
 
 .H2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
 }

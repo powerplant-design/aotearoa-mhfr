@@ -20,7 +20,7 @@ export default function Page() {
                 </div>
             </div>
             <div className={Style.navFooter}>
-                <Link className={Style.Link} href='/keepsafe/ask-03'>
+                <Link className={Style.Link} href='/keepsafe/ask-04'>
                     BACK
                 </Link>
                 <Link className={Style.Link} href='/keepsafe/call-01'>

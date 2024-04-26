@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-// import IconPerson from "@/public/icon-person.svg";
+import localFont from "next/font/local";
+const myFont = localFont({ src: "../../public/fonts/BrightfateRegular.otf" });
 
 const convos = [
     {
@@ -32,7 +32,9 @@ export default function Page() {
                         <div className='convo' key={convo.heading}>
                             <h2>{convo.heading}</h2>
                             <h3>{convo.subheading}</h3>
-                            <h4>{convo.tereo}</h4>
+                            <h4 className={`${myFont.className}`}>
+                                {convo.tereo}
+                            </h4>
                         </div>
                     );
                 })}

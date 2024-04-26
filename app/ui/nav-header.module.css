@@ -5,8 +5,6 @@
     justify-content: space-between;
     padding: 0.5rem 1.5rem 0.5rem 1rem;
     height: 75px;
-    /* position: sticky;
-    top: 0; */
 }
 
 .navDrawer {
@@ -49,14 +47,13 @@
 
 .navImage {
     position: absolute;
-    /* margin-top: 200px; */
     scale: 1.4;
     bottom: -200px;
     left: 0;
     right: 0;
-    -webkit-animation: spin 13s linear infinite;
-    -moz-animation: spin 13s linear infinite;
-    animation: spin 13s linear infinite;
+    -webkit-animation: spin 15s linear infinite;
+    -moz-animation: spin 15s linear infinite;
+    animation: spin 15s linear infinite;
 }
 
 @-moz-keyframes spin {

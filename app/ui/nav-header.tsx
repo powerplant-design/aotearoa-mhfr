@@ -31,7 +31,7 @@ export default function HeaderNav() {
     let title = "";
     if (pathname == "/") title = "MENTAL HEALTH FIRST RESPONSE";
     else if (pathname == "/convos") title = "CONVOS";
-    else if (pathname == "/convos") title = "CONVOS";
+    else if (pathname == "/keepsafe") title = "KEEP SAFE";
     else if (pathname == "/support") title = "SUPPORT SERVICES";
     else if (pathname == "/guiding-lights") title = "GUIDING LIGHTS";
 
