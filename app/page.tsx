@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 import localFont from "next/font/local";
 const myFont = localFont({ src: "../public/fonts/BrightfateRegular.otf" });

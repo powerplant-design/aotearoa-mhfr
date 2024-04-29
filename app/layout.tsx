@@ -30,6 +30,7 @@ export default function RootLayout({
                     <NavHeader />
                     {children}
                 </div>
+                <Analytics />
             </body>
         </html>
     );
