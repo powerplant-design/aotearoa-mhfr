@@ -12,28 +12,10 @@ export default function Home() {
             <Image
                 src='/logo-opotiki.png'
                 alt='Opotiki Logo'
-                width={300}
-                height={300}
+                width={360}
+                height={360}
                 priority
             />
-            <div className='home-content-modal'>
-                <div className='home-content font-bold'>
-                    <p>
-                        This app is a tool for Mental Health First Responders to
-                        use when supporting others.
-                    </p>
-                    <p>
-                        If you are experiencing distress please check our
-                        support services, or get in touch with a trusted friend.
-                    </p>
-                    {/* <button
-                        onClick={handleclick}
-                        className='home-content-button'
-                    >
-                        LET&apos;S DO THIS
-                    </button> */}
-                </div>
-            </div>
             <div className='navFooter'>
                 <Link className='Link' href='/support'>
                     SUPPORT SERVICES

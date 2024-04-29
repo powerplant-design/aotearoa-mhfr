@@ -21,7 +21,12 @@ const links = [
 ];
 
 export default function HeaderNav() {
+    const [isEntered, setIsEntered] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+
+    function handleClose() {
+        setIsEntered(!isEntered);
+    }
 
     function handleClick() {
         setIsOpen(!isOpen);
@@ -31,7 +36,7 @@ export default function HeaderNav() {
     let title = "";
     if (pathname == "/") title = "MENTAL HEALTH FIRST RESPONSE";
     else if (pathname == "/convos") title = "CONVOS";
-    else if (pathname == "/keepsafe") title = "KEEP SAFE";
+    else if (pathname.includes("/keepsafe")) title = "KEEP SAFE";
     else if (pathname == "/support") title = "SUPPORT SERVICES";
     else if (pathname == "/guiding-lights") title = "GUIDING LIGHTS";
 
@@ -45,8 +50,30 @@ export default function HeaderNav() {
                 )}
             </button>
 
-            {/* <p className='font-bold tracking-wide'>{pathname}</p> */}
             <p className='font-bold tracking-wide'>{title}</p>
+
+            <div
+                className={clsx([styles.homeContentModal], {
+                    [styles.homeContentModalClosed]: isEntered,
+                })}
+            >
+                <div className={styles.homeContent}>
+                    <p>
+                        This app is a tool for Mental Health First Responders to
+                        use when supporting others.
+                    </p>
+                    <p>
+                        If you are experiencing distress please check our
+                        support services, or get in touch with a trusted friend.
+                    </p>
+                    <button
+                        onClick={handleClose}
+                        className='home-content-button'
+                    >
+                        ENTER ŌPŌTIKI APP
+                    </button>
+                </div>
+            </div>
 
             <div
                 className={clsx([styles.navDrawer], {
@@ -73,7 +100,6 @@ export default function HeaderNav() {
                     <Image
                         src='/logo-opotiki.png'
                         alt='Opotiki Logo'
-                        // className={styles.navImage}
                         className={clsx([styles.navImage], {
                             [styles.navImageHide]: !isOpen,
                         })}

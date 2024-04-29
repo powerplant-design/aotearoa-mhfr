@@ -72,3 +72,40 @@
         transform: rotate(360deg);
     }
 }
+
+.homeContentModal {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(26, 62, 73, 0.93);
+    display: grid;
+    place-items: center;
+    z-index: 777;
+}
+
+.homeContentModalClosed {
+    display: none;
+}
+
+.homeContent {
+    font-weight: 700;
+    margin: 3rem;
+    display: flex;
+    gap: 1.6rem;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        border-top: 1px solid #f17e2b;
+        border-left: 1px solid #f17e2b;
+        border-right: 1px solid #f17e2b;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .navDrawer {
+        border-left: 1px solid #f17e2b;
+        border-right: 1px solid #f17e2b;
+        border-bottom: 1px solid #f17e2b;
+        border-radius: 0 0 1rem 1rem;
+    }
+}
