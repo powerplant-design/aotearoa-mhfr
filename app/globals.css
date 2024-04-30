@@ -63,8 +63,7 @@ body {
 
 .container {
     padding: 1.6rem;
-    margin-top: 1rem;
-    margin-bottom: 45px;
+    margin-bottom: 3.4rem;
 }
 
 .centerer {
@@ -114,9 +113,7 @@ h2 {
 
 .home-content-button,
 .Link {
-    letter-spacing: 0.05rem;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.3rem;
     flex-grow: 1;
     background-color: #193f49;
     padding: 0.5rem 1rem;
@@ -132,6 +129,12 @@ h2 {
 .convo,
 .light {
     padding-bottom: 4rem;
+}
+
+.H3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .convo h3 {
@@ -162,4 +165,27 @@ h2 {
 
 .supportText {
     text-align: center;
+}
+
+.supportContainer {
+    display: grid;
+    gap: 1rem;
+}
+
+.supportContact {
+    background: rgba(26, 62, 73, 0.5);
+    border-radius: 1rem;
+    padding: 0.8rem 1rem;
+    display: grid;
+    gap: 1rem;
+    border-bottom: 1px solid black;
+}
+
+.supportButtons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.supportCall {
+    background: #f17e2b;
 }

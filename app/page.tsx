@@ -11,8 +11,8 @@ export default function Home() {
             <Image
                 src='/logo-opotiki.png'
                 alt='Opotiki Logo'
-                width={360}
-                height={360}
+                width={340}
+                height={340}
                 priority
             />
             <div className='navFooter'>

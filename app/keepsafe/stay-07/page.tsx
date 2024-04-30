@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Icon from "@/public/zag.svg";
+import Icon03 from "@/public/icon-03.svg";
 
 import Style from "@/app/keepsafe/keepsafe.module.css";
 
@@ -8,7 +8,7 @@ export default function Page() {
     return (
         <>
             <div className={Style.header}>
-                <Image src={Icon} alt='Icon' />
+                <Image src={Icon03} alt='Icon' />
                 <h2 className={Style.H2}>Supporter Care</h2>
             </div>
             <div className={Style.container}>
@@ -28,7 +28,7 @@ export default function Page() {
                     BACK
                 </Link>
                 <Link className={Style.Link} href='/support'>
-                    SUPPORT
+                    SUPPORT SERVICES
                 </Link>
             </div>
         </>
