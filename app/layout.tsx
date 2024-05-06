@@ -4,6 +4,7 @@ import { poppins } from "@/app/ui/fonts";
 import bg from "@/public/bg.jpg";
 
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import NavHeader from "@/app/ui/navHeader";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
                     {children}
                 </div>
                 <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );
