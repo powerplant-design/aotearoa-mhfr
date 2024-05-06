@@ -15,7 +15,7 @@ const supportContacts = [
         text: "Here you can be transferred to Tūhoe Hauora or Tūwharetoa ki Kawerau Hauora, to see professionals in specialised fields.",
         // phoneButton: "0800 486 947",
         // phone: "+0800 486 947",
-        href: "https://www.healthpoint.co.nz/public/mental-health-specialty/infant-child-adolescent-mental-health-bay/at/106-commerce-street-whakatane/",
+        href: "http://www.tuwharetoa.org.nz/ebipa/",
     },
     {
         id: 3,
