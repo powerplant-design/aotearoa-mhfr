@@ -6,11 +6,11 @@ import SupportContactsOpotiki from "@/app/ui/supportContactsOpotiki";
 export default function SupportContacts() {
     return (
         <div className='supportContainer'>
-            <h2>National Helplines</h2>
-            <SupportContactsAotearoa />
             <h2>Local Support</h2>
-            <SupportContactsWhakatane />
             <SupportContactsOpotiki />
+            <SupportContactsWhakatane />
+            <h2>Aotearoa Helplines</h2>
+            <SupportContactsAotearoa />
         </div>
     );
 }
