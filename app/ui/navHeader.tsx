@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 // import NavLinks from "@/app/ui/nav-links";
 
-import styles from "@/app/ui/nav-header.module.css";
+import styles from "@/app/ui/navHeader.module.css";
 import clsx from "clsx";
 
 import hamburger from "@/public/nav-hamburg.svg";
@@ -59,21 +59,24 @@ export default function HeaderNav() {
                     [styles.homeContentModalClosed]: isEntered,
                 })}
             >
-                <div className={styles.homeContent}>
-                    <p>
-                        This app is a tool for Mental Health First Responders to
-                        use when supporting others.
-                    </p>
-                    <p>
-                        If you are experiencing distress please check our
-                        support services, or get in touch with a trusted friend.
-                    </p>
-                    <button
-                        onClick={handleClose}
-                        className='home-content-button'
-                    >
-                        ENTER ŌPŌTIKI APP
-                    </button>
+                <div className={styles.homeContentWrapper}>
+                    <div className={styles.homeContent}>
+                        <p>
+                            This app is a tool for Mental Health First
+                            Responders to use when supporting others.
+                        </p>
+                        <p>
+                            If you are experiencing distress please check our
+                            support services, or get in touch with a trusted
+                            friend.
+                        </p>
+                        <button
+                            onClick={handleClose}
+                            className='home-content-button'
+                        >
+                            ENTER ŌPŌTIKI APP
+                        </button>
+                    </div>
                 </div>
             </div>
 

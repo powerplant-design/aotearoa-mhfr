@@ -5,7 +5,7 @@ import bg from "@/public/bg.jpg";
 
 import { Analytics } from "@vercel/analytics/react";
 
-import NavHeader from "@/app/ui/nav-header";
+import NavHeader from "@/app/ui/navHeader";
 
 export const metadata: Metadata = {
     title: "Ōpōtiki App",

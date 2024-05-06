@@ -22,7 +22,7 @@ export default function Page() {
             <div className={Style.navFooter}>
                 <Link
                     className={`${Style.Link} ${Style.linkWide}`}
-                    href='/support/step'
+                    href='/support/steps'
                 >
                     SUPPORT OPTIONS
                 </Link>

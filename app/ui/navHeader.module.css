@@ -77,13 +77,19 @@
     position: absolute;
     inset: 0;
     background-color: rgba(26, 62, 73, 0.93);
-    display: grid;
-    place-items: center;
     z-index: 777;
+    overflow-y: hidden;
 }
 
 .homeContentModalClosed {
     display: none;
+}
+
+.homeContentWrapper {
+    display: grid;
+    place-items: center;
+    max-height: 100vh;
+    height: 100%;
 }
 
 .homeContent {

@@ -1,9 +1,9 @@
-import SupportContacts from "@/app/ui/support-contacts";
+import SupportContacts from "@/app/ui/supportContacts";
 
 export default function Page() {
     return (
         <>
-            <div className='container'>
+            <div className='container noMarginBottom'>
                 <SupportContacts />
             </div>
         </>

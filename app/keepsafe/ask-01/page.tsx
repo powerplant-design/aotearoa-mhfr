@@ -17,6 +17,9 @@ export default function Page() {
                 </div>
             </div>
             <div className={Style.navFooter}>
+                <Link className={Style.Link} href='/keepsafe'>
+                    BACK
+                </Link>
                 <Link className={Style.Link} href='/convos'>
                     NO
                 </Link>

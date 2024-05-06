@@ -62,8 +62,12 @@ body {
 }
 
 .container {
-    padding: 1.6rem;
-    margin-bottom: 3.4rem;
+    padding: 1.6rem 1rem;
+    margin-bottom: 3.6rem;
+}
+
+.noMarginBottom {
+    margin-bottom: 0;
 }
 
 .centerer {
@@ -86,7 +90,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1;
 }
@@ -103,17 +107,25 @@ h2 {
 
 .navFooter {
     position: absolute;
-    left: 1rem;
-    bottom: 1.2rem;
-    right: 1rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 1rem 1.2rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
+@media (max-width: 768px) {
+    .navFooterFixed {
+        position: fixed;
+        background: linear-gradient(rgba(0, 0, 0, 0), #f17e2b, #f17e2b);
+    }
+}
+
 .home-content-button,
 .Link {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     flex-grow: 1;
     background-color: #193f49;
     padding: 0.5rem 1rem;
@@ -132,7 +144,8 @@ h2 {
 }
 
 .H3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -152,7 +165,6 @@ h2 {
 
 .light h2 {
     max-width: 13ch;
-    font-size: 2rem;
 }
 
 .light h3 {
@@ -169,23 +181,38 @@ h2 {
 
 .supportContainer {
     display: grid;
+    gap: 1.4rem;
+}
+
+.supportWrapper {
+    display: grid;
     gap: 1rem;
 }
 
 .supportContact {
     background: rgba(26, 62, 73, 0.5);
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     padding: 0.8rem 1rem;
     display: grid;
-    gap: 1rem;
-    border-bottom: 1px solid black;
+    gap: 0.3rem;
+    border-top: 1px solid #f17e2b;
+    border-bottom: 1px solid #193f49;
 }
 
 .supportButtons {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+.supportButton {
+    font-size: 1rem;
 }
 
 .supportCall {
     background: #f17e2b;
+}
+
+.supportCopy {
+    font-size: 0.8rem;
 }
