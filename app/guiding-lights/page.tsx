@@ -36,7 +36,7 @@ export default function Page() {
                     return (
                         <div className='light' key={light.heading}>
                             <h2>{light.heading}</h2>
-                            <h3>{light.subheading}</h3>
+                            {/* <h3>{light.subheading}</h3> */}
                         </div>
                     );
                 })}

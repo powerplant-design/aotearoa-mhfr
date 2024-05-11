@@ -30,7 +30,7 @@ const supportContacts = [
 export default function SupportContactsOpotiki() {
     return (
         <div className='supportWrapper'>
-            <h3 className='H3'>In Opōtiki</h3>
+            <h3 className='H3'>In Ōpōtiki</h3>
             {supportContacts.map((support) => {
                 return (
                     <div key={support.id} className='supportContact'>

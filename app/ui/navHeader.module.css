@@ -11,7 +11,7 @@
     height: calc(100% - 75px);
     position: absolute;
     background-color: #193f49;
-    inset: 75px 0 0 0;
+    inset: 74px 0 0 0;
     transition: transform 269ms ease-in-out;
     transform: translateX(-100%);
     padding: 0 1rem;
@@ -27,9 +27,11 @@
 
 .navLink {
     user-select: none;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-transform: uppercase;
     transition: color 400ms;
+    display: block;
+    padding-block: 0.1rem;
 }
 
 .navLink:hover {
@@ -47,8 +49,8 @@
 
 .navImage {
     position: absolute;
-    scale: 1.4;
-    bottom: -200px;
+    scale: 1.1;
+    bottom: -220px;
     left: 0;
     right: 0;
     -webkit-animation: spin 15s linear infinite;

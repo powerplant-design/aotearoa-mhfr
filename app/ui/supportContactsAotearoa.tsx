@@ -3,7 +3,7 @@ import Link from "next/link";
 const supportContacts = [
     {
         id: 1,
-        name: "1373: tahi whitu toru whitu",
+        name: "1737: tahi whitu toru whitu",
         text: "Talk with a trained counsellor 24/7.",
         phoneButton: "CALL 1737",
         phone: "+1737",
