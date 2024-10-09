@@ -3,11 +3,11 @@ import Link from "next/link";
 const supportContacts = [
     {
         id: 1,
-        name: "Te  Pou Oranga o Whakatōhea",
+        name: "Te Pou Oranga o Whakatōhea",
         text: "Kaupapa Māori Social & Health Services.",
         // phoneButton: "0800 774 545",
         // phone: "+0800 774 545",
-        href: "https://www.whakatohea.co.nz/te-ratonga",
+        href: "https://www.whakatohea.co.nz/te-pou-oranga-1",
     },
     {
         id: 2,

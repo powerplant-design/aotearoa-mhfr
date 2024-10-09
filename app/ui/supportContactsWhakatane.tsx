@@ -7,7 +7,7 @@ const supportContacts = [
         text: "24/7 crisis team.",
         phoneButton: "0800 774 545",
         phone: "+0800 774 545",
-        href: "https://www.healthpoint.co.nz/public/mental-health-specialty/adult-community-mental-health-service-bay/at/whakatane-hospital/",
+        href: "https://www.healthpoint.co.nz/public/psychiatry/adult-community-mental-health-service-bay/",
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const supportContacts = [
         text: "Child, Adolescent and Maternal Mental Health.",
         phoneButton: "0800 486 947",
         phone: "+0800 486 947",
-        href: "https://www.healthpoint.co.nz/public/mental-health-specialty/infant-child-adolescent-mental-health-bay/at/106-commerce-street-whakatane/",
+        href: "https://www.healthpoint.co.nz/public/psychiatry/maternal-infant-child-adolescent-mental-health/at/106-commerce-street-whakatane/",
     },
 ];
 

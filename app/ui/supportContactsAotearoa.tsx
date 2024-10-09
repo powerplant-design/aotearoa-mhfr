@@ -15,7 +15,7 @@ const supportContacts = [
         text: "24/7 free-to-call suicide crisis helpline.",
         phoneButton: "0508 TAUTOKO",
         phone: "+0508 828 865",
-        href: "https://www.healthpoint.co.nz/mental-health-addictions/mental-health-addictions/0508-tautoko/",
+        href: "https://www.healthpoint.co.nz/mental-health-addictions/mental-health/0508-tautoko/?region=im%3A7aa8eb2b-75a9-43a6-9286-d15674204a25&programmeArea=im%3A42a1e54a-a52d-4c63-b91a-18714aef1c38&programmeType=im%3Ac8df5627-a0c7-418f-941d-3ec23ea3ccf0",
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ const supportContacts = [
         text: "24/7 Depression Helpline. Talk to a trained counsellor about how you are feeling.",
         phoneButton: "0800 111 757",
         phone: "+0800 111 757",
-        href: "https://www.healthpoint.co.nz/mental-health-addictions/mental-health-addictions/depression-helpline/",
+        href: "https://www.healthpoint.co.nz/mental-health-addictions/mental-health/depression-helpline/",
     },
     {
         id: 4,
