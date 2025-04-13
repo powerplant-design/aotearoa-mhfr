@@ -25,7 +25,6 @@ export default function RootLayout({
                     className='main md:rounded-2xl h-full'
                     // style={{
                     //     backgroundImage: `url(${bg.src})`,
-                    //     backgroundSize: "cover",
                     // }}
                 >
                     <NavHeader />
