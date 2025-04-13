@@ -13,7 +13,7 @@ import hamburger from "@/public/nav-hamburg.svg";
 import close from "@/public/nav-close.svg";
 
 const links = [
-    { name: "Ōpōtiki", href: "/" },
+    { name: "Home", href: "/" },
     { name: "CONVOS", href: "/convos" },
     { name: "Keep Safe Steps", href: "/keepsafe" },
     { name: "Support Services", href: "/support" },
@@ -74,7 +74,7 @@ export default function HeaderNav() {
                             onClick={handleClose}
                             className='home-content-button'
                         >
-                            ENTER ŌPŌTIKI APP
+                            ENTER AOTEAROA MHFR APP
                         </button>
                     </div>
                 </div>
