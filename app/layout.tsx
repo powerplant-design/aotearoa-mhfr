@@ -9,7 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import NavHeader from "@/app/ui/navHeader";
 
 export const metadata: Metadata = {
-    title: "Ōpōtiki App",
+    title: "Aotearoa MHFR",
     description: "Mental Health First Response",
 };
 
