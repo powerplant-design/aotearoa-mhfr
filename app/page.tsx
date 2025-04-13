@@ -7,7 +7,7 @@ const myFont = localFont({ src: "../public/fonts/BrightfateRegular.otf" });
 export default function Home() {
     return (
         <div className='container centerer'>
-            <h1 className={`${myFont.className}`}>Ōpōtiki</h1>
+            <h1 className={`${myFont.className}`}>Aotearoa</h1>
             <Image
                 src='/logo-opotiki.png'
                 alt='Opotiki Logo'

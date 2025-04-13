@@ -23,10 +23,10 @@ export default function RootLayout({
             <body className='md:py-8'>
                 <div
                     className='main md:rounded-2xl h-full'
-                    style={{
-                        backgroundImage: `url(${bg.src})`,
-                        backgroundSize: "cover",
-                    }}
+                    // style={{
+                    //     backgroundImage: `url(${bg.src})`,
+                    //     backgroundSize: "cover",
+                    // }}
                 >
                     <NavHeader />
                     {children}

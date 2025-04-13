@@ -74,7 +74,7 @@ export default function HeaderNav() {
                             onClick={handleClose}
                             className='home-content-button'
                         >
-                            ENTER AOTEAROA MHFR APP
+                            ENTER AOTEAROA MHFR
                         </button>
                     </div>
                 </div>

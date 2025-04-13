@@ -1,5 +1,5 @@
 .nav {
-    background-color: #193f49;
+    background-color: var(--color-dark);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +10,7 @@
 .navDrawer {
     height: calc(100% - 75px);
     position: absolute;
-    background-color: #193f49;
+    background-color: var(--color-dark);
     inset: 74px 0 0 0;
     transition: transform 269ms ease-in-out;
     transform: translateX(-100%);
@@ -35,12 +35,12 @@
 }
 
 .navLink:hover {
-    color: #f17e2b;
+    color: var(--color-light);
 }
 
 .navLinkFocused {
     pointer-events: none;
-    color: #f17e2b;
+    color: var(--color-light);
 }
 
 .navImageHide {
@@ -78,7 +78,7 @@
 .homeContentModal {
     position: absolute;
     inset: 0;
-    background-color: rgba(26, 62, 73, 0.93);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 777;
     overflow-y: hidden;
 }
@@ -104,16 +104,16 @@
 
 @media (min-width: 768px) {
     .nav {
-        border-top: 1px solid #f17e2b;
-        border-left: 1px solid #f17e2b;
-        border-right: 1px solid #f17e2b;
+        border-top: 1px solid var(--color-light);
+        border-left: 1px solid var(--color-light);
+        border-right: 1px solid var(--color-light);
         border-radius: 1rem 1rem 0 0;
     }
 
     .navDrawer {
-        border-left: 1px solid #f17e2b;
-        border-right: 1px solid #f17e2b;
-        border-bottom: 1px solid #f17e2b;
+        border-left: 1px solid var(--color-light);
+        border-right: 1px solid var(--color-light);
+        border-bottom: 1px solid var(--color-light);
         border-radius: 0 0 1rem 1rem;
     }
 }

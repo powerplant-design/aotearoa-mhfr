@@ -6,9 +6,9 @@ import SupportContactsOpotiki from "@/app/ui/supportContactsOpotiki";
 export default function SupportContacts() {
     return (
         <div className='supportContainer'>
-            <h2>Local Support</h2>
+            {/* <h2>Local Support</h2>
             <SupportContactsOpotiki />
-            <SupportContactsWhakatane />
+            <SupportContactsWhakatane /> */}
             <h2>Aotearoa Helplines</h2>
             <SupportContactsAotearoa />
         </div>
