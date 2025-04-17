@@ -1,26 +1,36 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-const subdomains = ['aotearoa', 'opotiki', 'whakatane'];
+import regions from './regions';
 
 export const config = {
     matcher: ['/((?!api/|_next/|_static/|_vercel|[\\w-]+\\.\\w+).*)'],
 };
 
+function getRootDomain(hostname: string): string {
+    if (hostname.includes('localhost')) {
+        return 'localhost:3000';
+    }
+    const parts = hostname.split('.');
+    return parts.slice(-2).join('.');
+}
+
 export default async function middleware(req: NextRequest) {
     const url = req.nextUrl;
     const hostname = req.headers.get('host');
     const targetSubdomain = hostname?.split('.')[0] || '';
+    const protocol = req.headers.get('x-forwarded-proto') || 'http';
 
-    const subdomain = subdomains.find((s) => s === targetSubdomain) || null;
+    const subdomain =
+        regions.find((region) => region.name === targetSubdomain) || null;
 
     if (subdomain) {
-        return NextResponse.rewrite(
-            new URL(`/${subdomain}${url.pathname}`, req.url)
-        );
+        const newUrl = new URL(`/${subdomain.name}${url.pathname}`, req.url);
+        return NextResponse.rewrite(newUrl);
     }
 
-    const protocol = req.headers.get('x-forwarded-proto') || 'http';
-    return NextResponse.redirect(
-        new URL(`${protocol}://${subdomains[0]}.${hostname}`)
+    const rootDomain = getRootDomain(hostname || '');
+    const newUrl = new URL(
+        `${protocol}://${regions[0].name}.${rootDomain}${url.pathname}`,
+        req.url
     );
+    return NextResponse.redirect(newUrl);
 }

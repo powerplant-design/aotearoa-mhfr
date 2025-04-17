@@ -1,14 +1,25 @@
-'use client';
-import { useParams } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const Home = () => {
-    const params = useParams();
-    const tenant = params.subdomain;
+import localFont from 'next/font/local';
+const myFont = localFont({ src: '../../public/fonts/BrightfateRegular.otf' });
 
-    // if tenant === 'aotearoa' then show aotearoa
-    // else show website
-
-    return <div>{tenant}</div>;
-};
-
-export default Home;
+export default function Home() {
+    return (
+        <div className="container centerer">
+            <h1 className={`${myFont.className}`}>Aotearoa</h1>
+            <Image
+                src="/logo-opotiki.png"
+                alt="Opotiki Logo"
+                width={340}
+                height={340}
+                priority
+            />
+            <div className="navFooter">
+                <Link className="Link" href="/support">
+                    SUPPORT SERVICES
+                </Link>
+            </div>
+        </div>
+    );
+}
