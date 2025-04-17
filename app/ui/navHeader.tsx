@@ -1,32 +1,38 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useParams, usePathname } from 'next/navigation';
+import upperCase from 'lodash/upperCase';
+
 // import NavLinks from "@/app/ui/nav-links";
 
-import styles from "@/app/ui/navHeader.module.css";
-import clsx from "clsx";
+import styles from '@/app/ui/navHeader.module.css';
+import clsx from 'clsx';
 
-import hamburger from "@/public/nav-hamburg.svg";
-import close from "@/public/nav-close.svg";
+import hamburger from '@/public/nav-hamburg.svg';
+import close from '@/public/nav-close.svg';
+import regions from '@/regions';
+import RegionSelector from './RegionSelector';
 
 const links = [
-    { name: "Home", href: "/" },
-    { name: "CONVOS", href: "/convos" },
-    { name: "Keep Safe Steps", href: "/keepsafe" },
-    { name: "Support Services", href: "/support" },
-    { name: "Guiding Lights", href: "/guiding-lights" },
+    { name: 'Home', href: '/' },
+    { name: 'CONVOS', href: '/convos' },
+    { name: 'Keep Safe Steps', href: '/keepsafe' },
+    { name: 'Support Services', href: '/support' },
+    { name: 'Guiding Lights', href: '/guiding-lights' },
 ];
 
 export default function HeaderNav() {
     const [isEntered, setIsEntered] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const params = useParams();
+    const region = params.subdomain;
 
     function handleClose() {
         setIsEntered(!isEntered);
-        console.log("CLICK");
+        console.log('CLICK');
     }
 
     function handleClick() {
@@ -34,28 +40,28 @@ export default function HeaderNav() {
     }
 
     const pathname = usePathname();
-    let title = "";
-    if (pathname == "/") title = "MENTAL HEALTH FIRST RESPONSE";
-    else if (pathname == "/convos") title = "CONVOS";
-    else if (pathname.includes("/keepsafe")) title = "KEEP SAFE STEPS";
-    else if (pathname.includes("/support")) title = "SUPPORT SERVICES";
-    else if (pathname == "/guiding-lights") title = "GUIDING LIGHTS";
+    let title = '';
+    if (pathname == '/') title = 'MENTAL HEALTH FIRST RESPONSE';
+    else if (pathname == '/convos') title = 'CONVOS';
+    else if (pathname.includes('/keepsafe')) title = 'KEEP SAFE STEPS';
+    else if (pathname.includes('/support')) title = 'SUPPORT SERVICES';
+    else if (pathname == '/guiding-lights') title = 'GUIDING LIGHTS';
 
     return (
         <nav className={styles.nav}>
             <button onClick={handleClick}>
                 {isOpen ? (
-                    <Image src={close} alt='Menu Close' />
+                    <Image src={close} alt="Menu Close" />
                 ) : (
-                    <Image src={hamburger} alt='Menu Open' />
+                    <Image src={hamburger} alt="Menu Open" />
                 )}
             </button>
 
-            <p className='font-bold tracking-wide'>{title}</p>
+            <p className="font-bold tracking-wide">{title}</p>
 
             <div
                 className={clsx([styles.homeContentModal], {
-                    [styles.homeContentModalClosed]: pathname != "/",
+                    [styles.homeContentModalClosed]: pathname != '/',
                     [styles.homeContentModalClosed]: isEntered,
                 })}
             >
@@ -72,10 +78,15 @@ export default function HeaderNav() {
                         </p>
                         <button
                             onClick={handleClose}
-                            className='home-content-button'
+                            className="home-content-button"
                         >
-                            ENTER AOTEAROA MHFR
+                            ENTER{' '}
+                            {Array.isArray(region)
+                                ? region[0]
+                                : upperCase(region)}{' '}
+                            MHFR
                         </button>
+                        <RegionSelector />
                     </div>
                 </div>
             </div>
@@ -97,14 +108,14 @@ export default function HeaderNav() {
                                 })}
                                 onClick={handleClick}
                             >
-                                <p className=''>{link.name}</p>
+                                <p className="">{link.name}</p>
                             </Link>
                         );
                     })}
-
+                    <RegionSelector />
                     <Image
-                        src='/logo-opotiki.png'
-                        alt='Opotiki Logo'
+                        src="/logo-opotiki.png"
+                        alt="Opotiki Logo"
                         className={clsx([styles.navImage], {
                             [styles.navImageHide]: !isOpen,
                         })}

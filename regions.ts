@@ -1,4 +1,4 @@
-const regions = [
+const regions: Region[] = [
     { id: 0, name: 'aotearoa' },
     { id: 1, name: 'opotiki' },
     { id: 2, name: 'whakatane' },
