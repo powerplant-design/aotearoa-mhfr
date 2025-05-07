@@ -9,8 +9,8 @@ function getRootDomain(hostname: string): string {
     if (hostname.includes('localhost')) {
         return 'localhost:3000';
     }
-    const parts = hostname.split('.');
-    return parts.slice(-2).join('.');
+
+    return hostname;
 }
 
 export default async function middleware(req: NextRequest) {
