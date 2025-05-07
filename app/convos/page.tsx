@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import localFont from 'next/font/local';
 const myFont = localFont({
-    src: '../../../public/fonts/BrightfateRegular.otf',
+    src: '../../public/fonts/BrightfateRegular.otf',
 });
 
 const convos = [
