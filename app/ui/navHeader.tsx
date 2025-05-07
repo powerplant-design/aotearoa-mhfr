@@ -13,8 +13,8 @@ import clsx from 'clsx';
 
 import hamburger from '@/public/nav-hamburg.svg';
 import close from '@/public/nav-close.svg';
-import regions from '@/regions';
-import RegionSelector from './RegionSelector';
+// import regions from '@/regions';
+// import RegionSelector from './RegionSelector';
 
 const links = [
     { name: 'Home', href: '/' },
@@ -86,7 +86,7 @@ export default function HeaderNav() {
                                 : upperCase(region)}{' '}
                             MHFR
                         </button>
-                        <RegionSelector />
+                        {/* <RegionSelector /> */}
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@ export default function HeaderNav() {
                             </Link>
                         );
                     })}
-                    <RegionSelector />
+                    {/* <RegionSelector /> */}
                     <Image
                         src="/logo-opotiki.png"
                         alt="Opotiki Logo"

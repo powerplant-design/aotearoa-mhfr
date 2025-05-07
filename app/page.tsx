@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import localFont from 'next/font/local';
 import { useParams } from 'next/navigation';
-const myFont = localFont({ src: '../../public/fonts/BrightfateRegular.otf' });
+const myFont = localFont({ src: '../public/fonts/BrightfateRegular.otf' });
 
 export default function Home() {
     const params = useParams();
