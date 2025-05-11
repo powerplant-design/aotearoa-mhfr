@@ -11,7 +11,7 @@
 
 .header {
     color: var(--color-dark);
-    border-bottom: 2px solid var(--color-dark);
+    border-bottom: 2px solid var(--color-black);
     padding: 0 1rem 1rem;
     display: grid;
     gap: 1rem;
@@ -29,14 +29,15 @@
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
+    color: var(--color-black);
 }
 
 .body {
     height: 100%;
     font-size: 1.3rem;
     line-height: 1.35;
-    color: #193f49;
-    font-weight: 700;
+    color: var(--color-white);
+    font-weight: 500;
     display: flex;
     gap: 1.5rem;
     flex-direction: column;
@@ -57,7 +58,11 @@
 @media (max-width: 768px) {
     .navFooter {
         position: fixed;
-        background: linear-gradient(rgba(0, 0, 0, 0), var(--color-light), var(--color-light));
+        background: linear-gradient(
+            rgba(0, 0, 0, 0),
+            var(--color-light),
+            var(--color-light)
+        );
     }
 }
 

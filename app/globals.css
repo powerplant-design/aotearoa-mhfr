@@ -18,9 +18,11 @@
     font-stretch: normal;
 }
 
-
 :root {
-    --color-light: #e3e2e2;
+    --color-white: #f4f4f4;
+    --color-black: #000;
+    --color-highlight: #f80801;
+    --color-light: #913931;
     --color-dark: #313131;
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -37,7 +39,7 @@
 
 body {
     color: white;
-    background: var(--color-dark);
+    background: var(--color-black);
     min-height: 100vh;
     display: grid;
     place-items: center;
@@ -55,6 +57,10 @@ body {
     width: 100%;
     position: relative;
     overflow-x: hidden;
+}
+
+.bg-home {
+    background-color: var(--color-highlight);
 }
 
 .container {
@@ -77,7 +83,7 @@ h1 {
     font-size: 3.6rem;
     letter-spacing: -3px;
     margin: 0;
-    color: var(--color-dark);
+    color: var(--color-black);
     text-transform: uppercase;
     text-align: right;
     display: inline-block;
@@ -95,11 +101,11 @@ h2 {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1;
-    color: var(--color-dark);
+    color: var(--color-white);
 }
 
 h3 {
-    color: var(--color-dark);
+    color: var(--color-white);
 }
 
 .header {
@@ -124,9 +130,17 @@ h3 {
 }
 
 @media (max-width: 768px) {
+    body {
+        background: var(--color-dark);
+    }
+
     .navFooterFixed {
         position: fixed;
-        background: linear-gradient(rgba(255, 255, 255, 0), var(--color-light), var(--color-light));
+        background: linear-gradient(
+            rgba(255, 255, 255, 0),
+            var(--color-light),
+            var(--color-light)
+        );
     }
 }
 
@@ -142,13 +156,13 @@ h3 {
 }
 
 .home-content-button {
-    color:var(--color-dark);
+    color: var(--color-white);
     background-color: var(--color-light);
 }
 
 .convo,
 .light {
-    padding-bottom: 3.6rem;
+    padding-bottom: 4rem;
 }
 
 .H3 {
@@ -163,12 +177,14 @@ h3 {
 }
 
 .convo h4 {
-    margin-top: 2rem;
+    margin-top: 1.8rem;
+    margin-left: auto;
     text-align: right;
-    font-size: 2rem;
-    letter-spacing: -0.05rem;
+    font-size: 3rem;
+    letter-spacing: -0.06rem;
     line-height: 1.1;
-    color: var(--color-dark);
+    color: var(--color-black);
+    max-width: 12ch;
 }
 
 .light h2 {
@@ -177,14 +193,14 @@ h3 {
 
 .light h3 {
     font-size: 1.2rem;
-    text-align: right;
-    max-width: 22ch;
-    margin-top: 2rem;
-    margin-left: auto;
+    /* text-align: right; */
+    max-width: 28ch;
+    margin-top: 1rem;
+    /* margin-left: auto; */
 }
 
 .supportText {
-    color: var(--color-dark);
+    color: var(--color-white);
     text-align: center;
 }
 
@@ -216,10 +232,11 @@ h3 {
 
 .supportButton {
     font-size: 1rem;
+    font-weight: 700;
 }
 
 .supportCall {
-    color: var(--color-dark);
+    color: var(--color-white);
     background: var(--color-light);
 }
 
