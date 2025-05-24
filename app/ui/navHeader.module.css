@@ -78,7 +78,7 @@
 .homeContentModal {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(27, 62, 74, 0.9);
     z-index: 777;
     overflow-y: hidden;
 }

@@ -11,7 +11,7 @@
 
 .header {
     color: var(--color-dark);
-    border-bottom: 2px solid var(--color-black);
+    border-bottom: 2px solid var(--color-white);
     padding: 0 1rem 1rem;
     display: grid;
     gap: 1rem;
@@ -21,23 +21,19 @@
     margin: 1rem;
 }
 
-.header img {
-    filter: invert();
-}
-
 .H2 {
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .body {
     height: 100%;
     font-size: 1.3rem;
     line-height: 1.35;
-    color: var(--color-white);
-    font-weight: 500;
+    color: var(--color-dark);
+    font-weight: 700;
     display: flex;
     gap: 1.5rem;
     flex-direction: column;
