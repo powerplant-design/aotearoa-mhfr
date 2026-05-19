@@ -1,18 +1,23 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { headers } from "next/headers";
 
 import localFont from "next/font/local";
-import { useParams } from "next/navigation";
+import regions from "@/regions";
 const myFont = localFont({ src: "../public/fonts/BrightfateRegular.otf" });
 
 export default function Home() {
-    const params = useParams();
-    const region = params.subdomain;
+    const slug = headers().get("x-region");
+    const heading = regions.find((r) => r.slug === slug)?.name ?? "Aotearoa";
+
     return (
         <div className='container centerer'>
-            {/* <h1 className={`${myFont.className}`}>{region}</h1> */}
-            <h1 className={`${myFont.className}`}>Aotearoa</h1>
+            <h1
+                className={myFont.className}
+                style={{ textAlign: "center", margin: "0 auto" }}
+            >
+                {heading}
+            </h1>
             <Image
                 src='/logo-opotiki.png'
                 alt='Opotiki Logo'

@@ -3,18 +3,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams, usePathname } from "next/navigation";
-import upperCase from "lodash/upperCase";
-
-// import NavLinks from "@/app/ui/nav-links";
+import { usePathname } from "next/navigation";
 
 import styles from "@/app/ui/navHeader.module.css";
 import clsx from "clsx";
 
 import hamburger from "@/public/nav-hamburg.svg";
 import close from "@/public/nav-close.svg";
-// import regions from '@/regions';
-// import RegionSelector from './RegionSelector';
+import RegionSelector, { type RegionOption } from './RegionSelector';
 
 const links = [
     { name: "Home", href: "/" },
@@ -24,15 +20,31 @@ const links = [
     { name: "Guiding Lights", href: "/guiding-lights" },
 ];
 
-export default function HeaderNav() {
+export default function HeaderNav({ region, regionName }: { region?: string | null; regionName?: string | null }) {
     const [isEntered, setIsEntered] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-    const params = useParams();
-    const region = params.subdomain;
+    const [selectedRegion, setSelectedRegion] = useState<RegionOption | null>(
+        region ? { value: region, label: regionName ?? region } : null
+    );
+
+    function handleRegionSelect(option: RegionOption) {
+        setSelectedRegion(option);
+        const host = window.location.host;
+        const parts = host.split('.');
+        let newHost: string;
+        if (option.value === 'aotearoa') {
+            newHost = parts.length === 1 ? host : parts.slice(1).join('.');
+        } else if (parts.length === 1) {
+            newHost = `${option.value}.${host}`;
+        } else {
+            parts[0] = option.value;
+            newHost = parts.join('.');
+        }
+        window.location.href = `${window.location.protocol}//${newHost}`;
+    }
 
     function handleClose() {
         setIsEntered(!isEntered);
-        console.log("CLICK");
     }
 
     function handleClick() {
@@ -76,17 +88,13 @@ export default function HeaderNav() {
                             support services, or get in touch with a trusted
                             friend.
                         </p>
+                        <RegionSelector value={selectedRegion} onChange={handleRegionSelect} />
                         <button
                             onClick={handleClose}
                             className='home-content-button'
                         >
-                            ENTER AOTEAROA MHFR
-                            {/* {" "}
-                            {Array.isArray(region)
-                                ? region[0]
-                                : upperCase(region)}{" "} */}
+                            ENTER {selectedRegion ? selectedRegion.label.toUpperCase() : regionName ? regionName.toUpperCase() : "AOTEAROA"} MHFR
                         </button>
-                        {/* <RegionSelector /> */}
                     </div>
                 </div>
             </div>
@@ -112,7 +120,9 @@ export default function HeaderNav() {
                             </Link>
                         );
                     })}
-                    {/* <RegionSelector /> */}
+                    <div style={{ marginTop: '1rem' }}>
+                        <RegionSelector value={selectedRegion} onChange={handleRegionSelect} />
+                    </div>
                     <Image
                         src='/logo-opotiki.png'
                         alt='Opotiki Logo'

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { headers } from "next/headers";
 import SupportContacts from "@/app/ui/supportContacts";
 
 export default function Page({
@@ -6,12 +7,13 @@ export default function Page({
 }: {
     searchParams: { from?: string };
 }) {
-    const fromSteps = searchParams.from === 'steps';
+    const region = headers().get("x-region");
+    const fromSteps = searchParams.from === "steps";
 
     return (
         <>
-            <div className={fromSteps ? 'container' : 'container noMarginBottom'}>
-                <SupportContacts />
+            <div className={fromSteps ? "container" : "container noMarginBottom"}>
+                <SupportContacts region={region} />
             </div>
             {fromSteps && (
                 <div className='navFooter navFooterFixed'>
