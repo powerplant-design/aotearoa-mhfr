@@ -45,13 +45,20 @@ Regionalisation is handled entirely via subdomains — no cookies or user data a
 2. Server Components (e.g. `app/page.tsx`) call `headers().get('x-region')` to read the active region.
 3. The nav header's `RegionSelector` dropdown lets users switch region manually, which redirects to the matching subdomain.
 
+**Domain registrar / DNS host:** [MyHost](https://www.myhost.co.nz) — DNS records for `aotearoamhfr.nz` are managed there.
+
+**DNS records (as configured):**
+
+| Type | Host | Value |
+|------|------|-------|
+| A | `@` | `216.198.79.1` |
+| CNAME | `www` | `19de1d432740b88e.vercel-dns-017.com` |
+| CNAME | `*` | `cname.vercel-dns.com` |
+
 **Vercel configuration required:**
 
 1. In **Vercel dashboard → Project → Settings → Domains**, add `*.aotearoamhfr.nz` as a wildcard domain.
-2. In your **DNS provider**, add a wildcard CNAME record:
-   - Host: `*`
-   - Value: `cname.vercel-dns.com`
-   - (Keep the apex `aotearoamhfr.nz` pointed at Vercel as normal.)
+2. The wildcard CNAME `*` above is what makes subdomains like `opotiki.aotearoamhfr.nz` resolve to the Vercel deployment.
 
 **Local development:**
 
