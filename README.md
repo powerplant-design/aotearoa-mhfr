@@ -63,7 +63,7 @@ Regionalisation is handled entirely via subdomains — no cookies or user data a
 |------|------|-------|
 | A | `@` | `216.198.79.1` |
 | CNAME | `www` | `19de1d432740b88e.vercel-dns-017.com` |
-| CNAME | `*` | `cname.vercel-dns.com` |
+| CNAME | `*` | `19de1d432740b88e.vercel-dns-017.com` |
 
 **Vercel configuration required:**
 
