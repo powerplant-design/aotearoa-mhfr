@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { poppins } from "@/app/ui/fonts";
 import bg from "@/public/bg.jpg";
+import { headers } from "next/headers";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import NavHeader from "@/app/ui/navHeader";
+import regions from "@/regions";
 
 export const metadata: Metadata = {
     title: "Aotearoa MHFR",
@@ -18,6 +20,9 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const slug = headers().get("x-region");
+    const regionName = regions.find((r) => r.slug === slug)?.name ?? null;
+
     return (
         <html className={`${poppins.className} antialiased`} lang='en'>
             <body className='md:py-8'>
@@ -28,7 +33,7 @@ export default function RootLayout({
                         backgroundSize: "cover",
                     }}
                 >
-                    <NavHeader />
+                    <NavHeader region={slug} regionName={regionName} />
                     {children}
                 </div>
             </body>
