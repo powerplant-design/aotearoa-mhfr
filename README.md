@@ -45,7 +45,17 @@ Regionalisation is handled entirely via subdomains — no cookies or user data a
 2. Server Components (e.g. `app/page.tsx`) call `headers().get('x-region')` to read the active region.
 3. The nav header's `RegionSelector` dropdown lets users switch region manually, which redirects to the matching subdomain.
 
-**Domain registrar / DNS host:** [MyHost](https://www.myhost.co.nz) — DNS records for `aotearoamhfr.nz` are managed there.
+**Domain registrar:** [MyHost](https://www.myhost.co.nz)
+
+**Nameservers (current — Vercel):**
+- `ns1.vercel-dns.com`
+- `ns2.vercel-dns.com`
+
+**Previous MyHost nameservers (for reference if migrating away from Vercel):**
+- `ns1.myhost.nz`
+- `ns2.myhost.nz`
+- `ns3.myhost.nz`
+- `ns4.myhost.nz`
 
 **DNS records (as configured):**
 
