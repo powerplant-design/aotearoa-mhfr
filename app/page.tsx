@@ -26,6 +26,9 @@ export default function Home() {
                 priority
             />
             <div className='navFooter'>
+                <Link className='Link' href='/keepsafe'>
+                    KEEP SAFE STEPS
+                </Link>
                 <Link className='Link' href='/support'>
                     SUPPORT SERVICES
                 </Link>

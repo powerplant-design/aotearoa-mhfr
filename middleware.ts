@@ -11,11 +11,12 @@ export function middleware(request: NextRequest) {
         (r) => r.slug === subdomain && r.slug !== 'aotearoa'
     );
 
-    const response = NextResponse.next();
     if (isRegion) {
-        response.headers.set('x-region', subdomain);
+        const requestHeaders = new Headers(request.headers);
+        requestHeaders.set('x-region', subdomain);
+        return NextResponse.next({ request: { headers: requestHeaders } });
     }
-    return response;
+    return NextResponse.next();
 }
 
 export const config = {
