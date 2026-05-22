@@ -136,6 +136,12 @@ export const localContactsByRegion: Record<string, RegionSupportData> = {
                         text: "Providing advocacy support.",
                         href: "https://www.wwt.org.nz/",
                     },
+                    {
+                        id: 4,
+                        name: "Growing Through Grief",
+                        text: "A range of programmes and workshops designed to support people experiencing change, loss, and grief. Eastern Bay Of Plenty offices in Whakatāne and Ōpōtiki.",
+                        href: "https://www.acw.org.nz",
+                    },
                 ],
             },
             {
