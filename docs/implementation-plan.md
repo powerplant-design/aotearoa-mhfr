@@ -403,7 +403,69 @@ This runs once — after that all content is managed via CMS admin.
 
 ---
 
-## J — Migration order
+## J — Ongoing hosting costs
+
+All prices in NZD, ex GST. Correct as of May 2026.
+
+### Option A: Single VM (cheapest, self-managed)
+
+Nginx + PHP + MySQL on one instance. Requires basic sysadmin for updates, backups, MySQL maintenance.
+
+| Item | Spec | /mo (ex GST) |
+|---|---|---|
+| Compute | `c1.c2r4` — 2 vCPU, 4GB RAM | $98.92 |
+| Block storage | 20GB NVME boot volume | $5.20 |
+| Public IPv4 | 1 IP | $4.50 |
+| Data transfer | ~1GB out (national/international) | ~$0.12 |
+| **Total** | | **~$109/mo** (~$125 incl GST) |
+
+### Option B: VM + Managed Database (less maintenance)
+
+Catalyst Cloud manages MySQL — automated backups, patching, replication. Higher cost, less sysadmin work.
+
+| Item | Spec | /mo (ex GST) |
+|---|---|---|
+| Compute (web) | `c1.c1r2` — 1 vCPU, 2GB RAM | $49.46 |
+| Managed MySQL | `db.c1.c1r2` — 1 vCPU, 2GB RAM | $94.13 |
+| Block storage | 20GB | $5.20 |
+| Public IPv4 | 1 IP | $4.50 |
+| **Total** | | **~$153/mo** (~$176 incl GST) |
+
+### Dev/staging option
+
+For testing before going live:
+
+| Item | Spec | /mo (ex GST) |
+|---|---|---|
+| Compute | `c1.c1r2` — 1 vCPU, 2GB RAM | $49.46 |
+| Block storage | 10GB | $2.60 |
+| Public IPv4 | 1 IP | $4.50 |
+| **Total** | | **~$57/mo** (~$65 incl GST) |
+
+### Comparison: current spend
+
+| Provider | Cost | Notes |
+|---|---|---|
+| Vercel (free) | $0 | No CMS, no DB, US-hosted |
+| Vercel (Pro) | ~$33 NZD/mo | US-hosted, data sovereignty risk |
+| Catalyst Cloud (Option A) | ~$109/mo | NZ-hosted, includes CMS + DB |
+| Catalyst Cloud (Option B) | ~$153/mo | NZ-hosted, managed DB, less ops |
+
+### What you gain for the increase
+
+- **Data sovereignty** — content stays in NZ, under NZ law
+- **Silverstripe CMS** — non-technical editors manage content
+- **No telemetry** — 11ty and Silverstripe have zero telemetry
+- **No third-party scripts** — no analytics, no cookies on the public site
+- **Full control** — own VM, own data, own infrastructure
+
+### Free trial
+
+Catalyst Cloud offers a **$300 free trial credit** — enough to run Option A for ~2.5 months or test Option B for ~2 months before paying anything.
+
+---
+
+## K — Migration order
 
 | Step | Phase | What |
 |---|---|---|
