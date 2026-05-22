@@ -74,6 +74,45 @@ export const aotearoaContacts: SupportContact[] = [
 ];
 
 export const localContactsByRegion: Record<string, RegionSupportData> = {
+    mataatua: {
+        sections: [
+            {
+                heading: "In Whakatāne",
+                contacts: [
+                    {
+                        id: 1,
+                        name: "Adult Community Mental Health Service",
+                        text: "24/7 crisis team.",
+                        phoneButton: "0800 774 545",
+                        phone: "+0800 774 545",
+                        href: "https://www.healthpoint.co.nz/public/psychiatry/adult-community-mental-health-service-bay/",
+                    },
+                    {
+                        id: 2,
+                        name: "Voyagers",
+                        text: "Child, Adolescent and Maternal Mental Health.",
+                        phoneButton: "0800 486 947",
+                        phone: "+0800 486 947",
+                        href: "https://www.healthpoint.co.nz/public/psychiatry/maternal-infant-child-adolescent-mental-health/at/106-commerce-street-whakatane/",
+                    },
+                    {
+                        id: 3,
+                        name: "Ngā Mata Wai Ora",
+                        text: "Kaupapa Māori clinical and therapeutic counselling service for youth and adults across the Mataatua rohe.",
+                        phoneButton: "0800 628 228",
+                        phone: "+0800 628 228",
+                        href: "https://www.tpoom.co.nz/service/counselling",
+                    },
+                    {
+                        id: 4,
+                        name: "Growing Through Grief",
+                        text: "A range of programmes and workshops designed to support people experiencing change, loss, and grief. Eastern Bay Of Plenty offices in Whakatāne and Ōpōtiki.",
+                        href: "https://www.acw.org.nz",
+                    },
+                ],
+            },
+        ],
+    },
     opotiki: {
         sections: [
             {
